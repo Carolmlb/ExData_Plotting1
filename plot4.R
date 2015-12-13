@@ -23,7 +23,7 @@ globalActPow <- as.numeric(subData$Global_active_power)
 globalReactPow <- as.numeric(subData$Global_reactive_power)
 voltage <- as.numeric(subData$Voltage)
 
-
+?
 ## create plot on png device, 2 rows and 2 columns
 png("plot4.png", width=480, height=480)
 par(mfrow = c(2,2))
@@ -43,7 +43,7 @@ lines(dateTime, subMeter2, type = "l", col="red")
 lines(dateTime, subMeter3, type = "l", col="blue")
 ## write legend in top right corner; no box
 legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
-       lty=1, col=c("black", "red", "blue"), bty = "n")
+       lty=1, col=c("black", "red", "blue"), bty = "n",cex=.8)
 
 ## Plot 4: row 2, plot 2
 plot(dateTime, globalReactPow, type="l", xlab="datetime", ylab="Global_reactive_power")
